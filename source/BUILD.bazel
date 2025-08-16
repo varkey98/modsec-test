@@ -1,0 +1,6 @@
+cc_binary (
+    name = "main",
+    srcs = ["main.cc"],
+    deps = ["//modsecurity"],
+    data = ["basic_rules.conf"]
+)

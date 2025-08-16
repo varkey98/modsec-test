@@ -1,0 +1,8 @@
+cc_import(
+    name = "modsecurity",
+    shared_library = "libModSecurity.dll",
+    interface_library = "libModSecurity.lib", 
+    hdrs = glob(["headers/modsecurity/**/*.h"]),
+    strip_include_prefix = "headers",
+    visibility = ["//visibility:public"]
+)
