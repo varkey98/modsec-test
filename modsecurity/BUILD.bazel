@@ -6,3 +6,27 @@ cc_import(
     strip_include_prefix = "headers",
     visibility = ["//visibility:public"]
 )
+
+cc_import(
+    name = "modsecurity_static",
+    static_library = "static/libModSecurity.lib", 
+    hdrs = glob(["headers/modsecurity/**/*.h"]),
+    strip_include_prefix = "headers",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":mbedtls",
+        ":libinjection",
+        "//pcre2:pcre2",
+        "//poco:poco-foundation"
+    ]
+)
+
+cc_import(
+    name = "mbedtls",
+    static_library = "static/mbedcrypto.lib"
+)
+
+cc_import(
+    name = "libinjection",
+    static_library = "static/libinjection.lib"
+)

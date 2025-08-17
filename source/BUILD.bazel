@@ -1,6 +1,10 @@
 cc_binary (
     name = "main",
     srcs = ["main.cc"],
-    deps = ["//modsecurity"],
-    data = ["basic_rules.conf"]
+    deps = ["//modsecurity:modsecurity_static"],
+    data = ["basic_rules.conf"],
+    linkopts = [
+        "Ws2_32.lib",
+        "Iphlpapi.lib"
+    ]
 )

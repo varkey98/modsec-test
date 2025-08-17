@@ -1,0 +1,5 @@
+cc_import(
+    name = "pcre2",
+    static_library = "pcre2-8-static.lib",
+    visibility = ["//visibility:public"],
+)
