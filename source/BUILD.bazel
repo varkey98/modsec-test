@@ -4,7 +4,10 @@ cc_binary (
     deps = ["//modsecurity:modsecurity_static"],
     data = ["basic_rules.conf"],
     linkopts = [
+        "/LIBPATH:C:/Conan/Libs",
         "Ws2_32.lib",
-        "Iphlpapi.lib"
+        "Iphlpapi.lib",
+        "pcre2-8-static.lib",
+        "PocoFoundationmd.lib"
     ]
 )

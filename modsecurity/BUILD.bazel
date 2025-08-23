@@ -16,8 +16,8 @@ cc_import(
     deps = [
         ":mbedtls",
         ":libinjection",
-        "//pcre2:pcre2",
-        "//poco:poco-foundation"
+        # "//pcre2:pcre2",
+        # "//poco:poco-foundation"
     ]
 )
 

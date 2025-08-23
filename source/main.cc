@@ -19,7 +19,7 @@ void ModsecurityTest()
 {
     auto modsec = std::make_unique<modsecurity::ModSecurity>();
 
-    const char main_rule_uri[] = "C:\\Users\\varke\\Projects\\modsec-test\\source\\basic_rules.conf";
+    const char main_rule_uri[] = "C:\\project\\source\\basic_rules.conf";
     auto rules = std::make_unique<modsecurity::RulesSet>();
     if (rules->loadFromUri(main_rule_uri) < 0)
     {
